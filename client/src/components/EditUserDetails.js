@@ -13,7 +13,7 @@ console.log(props.user?._id)
 
 const navigate = useNavigate()
 
-const { setUser } = useContext(AuthContext)
+// const { setUser } = useContext(AuthContext)
 
 
 
@@ -30,9 +30,9 @@ const handleSubmit = e => {
     axios.put(`/api/user/${props.user?._id}`, requestBody)
         .then((updatedUser) => {
             console.log('updatedUser', updatedUser);
-            setUser(updatedUser) 
+            props.getCurrentUser()
             // redirect to the project list
-            navigate('/userpage')
+            // navigate('/userpage')
         })
         .catch(err => console.log(err))
 }

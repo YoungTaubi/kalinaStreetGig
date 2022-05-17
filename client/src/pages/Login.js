@@ -31,7 +31,7 @@ export default function Login() {
 				verifyStoredToken()									
 					.then(() => {
 						// redirect to projects
-						navigate(`/userpage`)
+						navigate(`/userpage/${user._id}`)
 					})
 			})
 			.catch(err => {

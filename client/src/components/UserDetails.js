@@ -11,7 +11,7 @@ function UserDetails (props) {
 const user = props.user
 
 
-console.log(user)
+console.log('user detail', user)
  
   
 

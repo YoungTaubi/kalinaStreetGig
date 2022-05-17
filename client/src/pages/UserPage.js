@@ -8,34 +8,39 @@ import { AuthContext } from "../context/auth.js";
 
 function UserPage() {
 
-const { id } = useParams()
-// const [currentUser, setCurrentUser] = useState(null)   
+	const { id } = useParams()
+	const [currentUser, setCurrentUser] = useState(null)
 
-const { user, setUser } = useContext(AuthContext)
+	// const { user, setUser } = useContext(AuthContext)
 
-	// useEffect(() => {
-	// 	axios.get(`/api/user/${id}`)
-	// 		.then(response => {
-	// 			console.log(response)
-	// 			setCurrentUser(response.data)
-	// 			console.log('res', response.data);
-	// 		})
-	// 		.catch(err => console.log(err))
-	// }, [])
+	const getCurrentUser = () => {
+		axios.get(`/api/user/${id}`)
+			.then(response => {
+				console.log(response)
+				setCurrentUser(response.data)
+				console.log('res', response.data);
+			})
+			.catch(err => console.log(err))
+	}
+
+	useEffect(() => {
+		getCurrentUser()
+	}, [])
 
 	return (
-        <>
-        <div >
-            <UserDetails user={user}/>
-            <EditUserDetails 
-			user={user}
-			setUser={setUser}
-			/>
-            <Link to="/AddEvent"><button className="primary-button">Create your event</button></Link>
-        </div>
+		<>
+			<div >
+				<UserDetails user={currentUser} />
+				<EditUserDetails
+					user={currentUser}
+					setUser={setCurrentUser}
+					getCurrentUser={getCurrentUser}
+				/>
+				<Link to="/AddEvent"><button className="primary-button">Create your event</button></Link>
+			</div>
 
-     
-       </>
+
+		</>
 	)
 }
 
