@@ -1,0 +1,240 @@
+.App {
+  text-align: center; 
+  display: flex;
+  flex-direction: column;
+align-items: center;
+
+}
+
+body {
+margin: 0;
+padding: 0;
+width: 100vw;
+height: 100vh;
+}
+
+
+.concert {
+text-align: center; 
+overflow: hidden;
+background-image: url("/public/photomania.jpg");
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+width: 100vw;
+height: 100vh;
+}
+
+
+.App-header {
+background-color: #282c34;
+display: flex;
+flex-direction: column;
+align-items: center;
+font-size: calc(10px + 2vmin);
+color: white;
+}
+
+
+.Navbar {
+position: fixed;
+width: 100vw;
+height: 60px;
+display: flex; 
+align-items: center;
+flex-direction: row;
+justify-content: space-evenly;
+margin-top: 0px;
+border-bottom: 2px solid var(--border);
+background-color: rgba(34, 28, 28, 0.675);
+backdrop-filter: blur(15px);
+
+}
+
+.btn-outline-light {
+margin: 0;
+padding : 7px;
+top: 0;
+}
+
+
+/* login and Signup */
+
+form.auth {
+  height: 420px;
+  width: 300px;
+  background-color: rgba(255,255,255,0.13);
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+  border-radius: 10px;
+  backdrop-filter: blur(15px);
+  border: 2px solid rgba(255,255,255,0.2);
+  box-shadow: 0 0 40px rgba(8,7,16,0.6);
+  padding: 50px 35px;
+}
+
+form *{
+  font-family: 'Poppins',sans-serif;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  outline: none;
+  border: none;
+}
+
+form h1{
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 42px;
+  text-align: center;
+}
+
+label.signup {
+  display: block;
+  margin-top: 30px;
+  font-size: 16px;
+  font-weight: 500;
+  color: black;
+}
+
+input.signup {
+  color: black;
+  display: block;
+  height: 50px;
+  width: 93%;
+  background-color: rgba(255, 255, 255, 0.45);
+  border-radius: 3px;
+  padding: 0 10px;
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+::placeholder{
+  color: rgb(34, 33, 33);
+  
+}
+
+button.login{
+  margin-top: 50px;
+  width: 100%;
+  background-color: #ffffff;
+  color: #080710;
+  padding: 15px 0;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/*Calendar*/
+.calendar-container {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  height: 500px;
+  width: 350px;
+  background-color: rgba(255,255,255,0.13);
+  top: 50%;
+  left: 50%;
+  border-radius: 10px;
+  backdrop-filter: blur(15px);
+  border: 2px solid rgba(255,255,255,0.2);
+  box-shadow: 0 0 40px rgba(8,7,16,0.6);
+  padding: 50px 35px;
+  margin-left: 60px;
+  margin-top: 100px;
+}
+
+.calendar {
+margin-bottom: 100px;
+}
+
+.AddPage {
+  background-image: url("/public/micro.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+display: flex;
+flex-direction: column;
+width: 100vw;
+height: 100vh;
+}
+
+.AddGig {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input.gig {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #080710;
+  width: 500px;
+  align-items: center;
+  border-radius: 10px;
+}
+
+textarea.gig {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #080710;
+  width: 500px;
+  align-items: center;
+}
+
+button {
+  margin-top: 50px;
+  width: 100%;
+  background-color: #ffffff;
+  color: #080710;
+  padding: 15px 0;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+
+button.gig {
+  margin-top: 50px;
+  width: 20%;
+  background-color: #ffffff;
+  color: #080710;
+  padding: 15px 0;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.UserD {
+
+background-image: url("/public/micro.jpg");
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+display: flex;
+flex-direction: column;
+width: 100vw;
+height: 100vh;
+color: white;
+
+}
+
+.UserCard {
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px; 
+  text-align: start;
+  margin-left: 50px;
+}
